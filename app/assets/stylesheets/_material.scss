@@ -1,0 +1,36 @@
+$white: white;
+$main-color:rgb(230, 230, 230);
+$main-back-coler: rgb(20, 20, 20);
+$main-color-low: rgb(150, 150, 150);
+
+// main-header用
+@mixin header-content(){
+  border-top: solid 2px $main-color;
+  margin: 5px;
+  padding-top: 10px;
+  color: $main-color;
+  width: 80px;
+  height: 40px;
+  a{
+    text-decoration: none;
+    color: $main-color;
+  }
+}
+@mixin header-hover(){
+  border-top: solid 4px $main-color-low;
+  margin: 5px;
+  padding-top: 8px;
+  color: $main-color-low;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  a{
+    text-decoration: none;
+    color: $main-color-low;
+  }
+}
+
+// プロフィール用
+@mixin profile-sns-area(){
+  width: 200px;
+  font-size: 16px;
+}

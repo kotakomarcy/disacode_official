@@ -1,0 +1,507 @@
+html{
+  background-color: $main-back-coler;
+}
+
+// 全体用
+*{
+  font-family: "Meiryo UI" , "メイリオ" , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+  img {
+    pointer-events: none; 
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-touch-callout:none;
+    -moz-user-select:none;
+    user-select:none;
+    }
+}
+li{
+  background-color: rgba(0, 0, 0, 0);
+}
+
+// 枠用
+.wrapper{
+  height: 100%;
+  padding: 20px;
+  a{
+    text-decoration: none;
+    color: $main-color;
+  }
+  .header{
+    box-sizing: border-box;
+    color: $main-color;
+    height: auto;
+    font-size: large;
+    .logo{
+      float: left;
+      width: 250px;
+      height: 120px;
+    }
+    .main-contents{
+      width: 640px;
+      margin: 10px 0 20px 300px;
+      color: $main-color;
+    }
+    .contents-title{
+      font-weight: bold;
+      width: 80px;
+      border-bottom: 4px solid red;
+      margin-bottom: 10px;
+    }
+    .top-image{
+      width: 640px;
+      height: 360px;
+      margin-left: 300px;
+      i{
+        padding: 0 10px;
+        font-size: 46px;
+        color: $main-color;
+        background-color: rgba(0, 0, 0, 0);
+      }
+      i:hover{
+        color: $main-color-low;
+      }
+      .fa.fa-angle-left.arrow-left.slick-arrow{
+        position: absolute;
+        top: 160px;
+        left: 5px;
+        z-index: 1;
+      }
+      .fa.fa-angle-right.arrow-right.slick-arrow{
+        position: absolute;
+        top: 160px;
+        right: 5px;
+      }
+    }
+    .contents{
+      padding: 10px;
+      width: 60%;
+      height: calc(100vh - 360px);
+      margin: 0 auto;
+    }
+  }
+}
+
+// サイドバー用
+.main-side-bar{
+  &__movie{
+    clear: both;
+    text-align: center;
+    float: left;
+    &__movie-icon{
+      size: 30px;
+    }
+  }
+  &__youtube{
+    border : double 3px $main-color ;
+    border-radius: 10px;
+    margin: 10px;
+    width: 260px;
+    height: 140px;
+    list-style: none;
+    // overflow: scroll;
+  }
+  &__movie-icon{
+    text-align: left;
+    padding-left: 20px;
+  }
+}
+
+// メインヘッダー用
+.main-bar{
+  position: relative;
+  max-width: calc(100% - 250px);
+  display: flex;
+  text-align: center;
+  padding-left: 50px;
+  font-weight: bold;
+  .header-top{
+    @include header-content;
+  }
+  .header-top:hover{
+    @include header-hover;
+  }
+  .header-profile{
+    @include header-content;
+  }
+  .header-profile:hover{
+    @include header-hover;
+  }
+  .header-music{
+    @include header-content;
+  }
+  .header-music:hover{
+    @include header-hover;
+  }
+  .header-info{
+    @include header-content;
+  }
+  .header-info:hover{
+    @include header-hover;
+  }
+  .header-picture{
+    @include header-content;
+  }
+  .header-picture:hover{
+    @include header-hover;
+  }
+  .header-video{
+    @include header-content;
+  }
+  .header-video:hover{
+    @include header-hover;
+  }
+  .header-contact{
+    @include header-content;
+  }
+  .header-contact:hover{
+    @include header-hover;
+  }
+}
+
+// スケジュール用
+.schedule{
+  box-sizing: border-box;
+  padding: 10px;
+  margin-left: 70px;
+  width: 640px;
+  &__box{
+    border-left-style: solid;
+    border-bottom-style: dotted;
+    margin: 10px;
+    max-width: 100%;
+    height: 200px;  
+    overflow: scroll;
+  }
+  &__message{
+    padding: 10px;
+    font-weight: normal;
+  }
+}
+
+// フッター用
+.footer{
+  width: 100%;
+  height: 80px;
+  color: $main-color;
+  border-top: 1px solid $main-color;
+  &__copyright{
+    width: 190px;
+    margin: 0 auto;  
+    display: flex;
+    font-size: 26px;
+    text-align: center;
+    padding-top: 20px;
+  }
+  &__year{
+    display: flex;
+    padding-top: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  &__band-name{
+    margin-left: 10px;
+  }
+}
+
+// プロフィール用
+.profile{
+  &__contents{
+    display: flex;
+    padding: 20px;
+    i{
+      padding: 0 10px;
+      font-size: 36px;
+      color: $main-color;
+      background-color: rgba(0, 0, 0, 0);
+    }
+    i:hover{
+      color: $main-color-low;
+    }
+    .fa.fa-angle-left.arrow-left.slick-arrow{
+      position: absolute;
+      top: 140px;
+      left: 5px;
+      z-index: 1;
+    }
+    .fa.fa-angle-right.arrow-right.slick-arrow{
+      position: absolute;
+      top: 140px;
+      right: 5px;
+    }
+  }
+  &__sinnosuke{
+    width: 200px;
+  }
+  &__akira{
+    width: 200px;
+    margin-left: 10px;
+  }
+  &__marcy{
+    width: 200px;
+    margin-left: 10px;
+  }
+  &__text{
+    display: flex;
+  }
+  &__sinnosuke-name{
+    width: 200px;
+    margin-left: 20px;
+    text-align: center;
+  }
+  &__sinnosuke-sns{
+    @include profile-sns-area;
+  }
+  &__akira-name{
+    width: 200px;
+    margin-left: 13px;
+    text-align: center;
+  }
+  &__akira-sns{
+    @include profile-sns-area;
+  }
+  &__marcy-name{
+    width: 200px;
+    margin-left: 10px;
+    text-align: center;
+  }
+  &__marcy-sns{
+    @include profile-sns-area;
+  }
+}
+
+// ミュージック用
+.music{
+  height: 100%;
+  margin-top: 20px;
+  border: 2px solid $main-color;
+  border-radius: 5px;
+  &__contents{
+    padding: 10px;
+    border-bottom: 1px dotted $main-color;
+    border-radius: 5px;
+    height: 350px;
+  }
+  &__jacket{
+    padding: 20px 10px;
+    height: 300px;
+    display: flex;
+    ul{
+      font-weight: bold;
+    }
+    li{
+      font-weight: normal;
+    }
+  }
+  a{
+    padding-top: 22px;
+  }
+  a:hover{
+    opacity: 0.5;
+    filter: brightness(130%);
+    -webkit-transition: all .2s;
+    transition: all .2s;
+  }
+  &__jacket-itunes-link{
+    width: 110px;
+    height: 40px;
+    margin: -45px 0 0 80px;
+    text-align: center;
+  }
+  &__title{
+    width: 300px;
+    margin-left: 20px;
+    padding-left: 20px;
+    font-size: 14px;
+  }
+  &__date{
+    font-size: 12px;
+    font-weight: normal;
+  }
+  &__recorded-music{
+    font-size: 12px;
+  }
+  &__recorded-music-title{  
+    width: 200px;
+    font-size: 12px;
+    margin-left: 10px;
+    border-bottom: 1px dashed $main-color-low;
+    line-height: 20px;
+
+  }
+}
+
+// video用
+.video{
+  &_contents{
+    display: flex;
+    padding: 10px 20px;
+  }
+  &__music-video-text{
+    margin-top: 20px;
+  }
+  &__music-video{
+    i{
+      padding: 0 10px;
+      font-size: 50px;
+      color: $main-color;
+      background-color: rgba(0, 0, 0, 0);
+    }
+    i:hover{
+      color: $main-color-low;
+    }
+    .fa.fa-angle-left.arrow-left.slick-arrow{
+      position: absolute;
+      top: 140px;
+      z-index: 1;
+    }
+    .fa.fa-angle-right.arrow-right.slick-arrow{
+      position: absolute;
+      top: 140px;
+      right: 40px;
+    }
+  }
+  &__live-video-text{
+    margin-top: 20px;
+  }
+  &__live-video{
+    i{
+      padding: 0 10px;
+      font-size: 50px;
+      color: $main-color;
+      background-color: rgba(0, 0, 0, 0);
+    }
+    i:hover{
+      color: $main-color-low;
+    }
+    .fa.fa-angle-left.arrow-left.slick-arrow{
+      position: absolute;
+      top: 140px;
+      z-index: 1;
+    }
+    .fa.fa-angle-right.arrow-right.slick-arrow{
+      position: absolute;
+      top: 140px;
+      right: 40px;
+    }
+  }
+}
+
+// contact用
+.contact{
+  padding: 20px;
+  &__contents{
+    font-size: 18px;
+  }
+  &__contents-info{
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+  &__contents-message-box{
+    width: 450px;
+    height: 100%;
+    margin: 0 auto;
+    border: 2px solid $main-color;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  &__input{
+    margin: 5px 20px;
+    font-size: 16px;
+    width: 300px;
+    height: 40px;
+    border: none;
+    align-items: center;
+    line-height: 1.5px;
+    font-size: 16px;
+    color: $main-color;
+    vertical-align: middle;
+    background: $main-back-coler;
+    border-bottom: 1px solid $main-color;
+  }
+  &__input-area{
+    margin: 5px 20px;
+    font-size: 16px;
+    max-width: 300px;
+    min-width: 300px;
+    width: 300px;
+    height: 100%;
+    min-height: 60px;
+    border: none;
+    align-items: stretch;
+    word-wrap:break-word;
+    overflow: scroll;
+    color: $main-color;
+    vertical-align: middle;
+    background: $main-back-coler;
+    border-bottom: 1px solid $main-color;
+  }
+  &__contents-submit{
+    margin: 10px 20px;
+    
+    .submit-btn{
+      width: 100px;
+      height: 45px;
+      padding: 0;
+      margin: 20px 0;
+      background-color: rgb(255, 70, 70);
+      color: $main-color;
+      font-size: 18px;
+      border-radius: 8px;
+      border: none;
+    }
+    .submit-btn:hover{
+      cursor : pointer;
+      background-color: rgb(255, 130, 130);
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+    }
+  }
+  
+  &__contents-done-name{
+    text-decoration:underline double $main-color;
+    width: 100%;
+  }
+  &__contents-done-info{
+    margin-top: 10px;
+  }
+  &__contents-done-create{
+    margin-top: 20px;
+    height: 100%;
+    width: 400px;
+    border: 1px solid $main-color;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 14px;
+    word-wrap:break-word;
+  }
+  h2{
+    font-size: 16px;
+  }
+  &__contents-done-message{
+    margin-top: 10px;
+  }
+  &__contents-done-notes{
+    width: 400px;
+    font-size: 16px;
+    margin: 20px 0;
+  }
+  &__contents-done-repost{
+    width: 350px;
+    height: 45px;
+    margin: 20px 40px;
+    padding-top: 15px;
+    background-color: rgb(255, 70, 70);
+    color: $main-color;
+    font-size: 18px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  &__contents-done-repost:hover{
+    cursor : pointer;
+    background-color: rgb(255, 130, 130);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+}

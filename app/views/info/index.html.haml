@@ -1,0 +1,13 @@
+.wrapper
+  .header
+    = link_to root_path do
+      .logo
+        = image_tag src="/assets/wh_logo.png", size: "250x95"
+    = render '/contents/main-header'
+    = render '/contents/main-side-bar'
+    .main-contents
+      .contents-title
+        Info
+      .info
+        .info__contents
+= render '/contents/footer'

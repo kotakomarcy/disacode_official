@@ -1,0 +1,59 @@
+.wrapper
+  .header
+    = link_to root_path do
+      .logo
+        = image_tag src="/assets/wh_logo.png", size: "250x95"
+    = render '/contents/main-header'
+    = render '/contents/main-side-bar'
+    .main-contents
+      .contents-title
+        Profile
+      .profile
+        .profile__contents
+          %ul.profile__sinnosuke
+            %li
+              = image_tag src="/assets/sinnosuke_01.jpg", size: "200x300"
+            %li
+              = image_tag src="/assets/sinnosuke_02.jpg", size: "200x300"
+            %li
+              = image_tag src="/assets/sinnosuke_03.jpg", size: "200x300"
+            %li
+              = image_tag src="/assets/sinnosuke_04.jpg", size: "200x300"
+          %ul.profile__akira
+            %li
+              = image_tag src="/assets/akira_01.jpg", size: "200x300"
+            %li
+              = image_tag src="/assets/akira_02.jpg", size: "200x300"
+            %li
+              = image_tag src="/assets/akira_03.jpg", size: "200x300"
+            %li
+              = image_tag src="/assets/akira_04.jpg", size: "200x300"
+          %ul.profile__marcy
+            %li
+              = image_tag src="/assets/marcy_01.jpg", size: "200x300"
+            %li
+              = image_tag src="/assets/marcy_02.jpg", size: "200x300"
+            %li
+              = image_tag src="/assets/marcy_03.jpg", size: "200x300"
+            %li
+              = image_tag src="/assets/marcy_04.jpg", size: "200x300"
+        .profile__text
+          .profile__sinnosuke-name
+            SHINNOSUKE(bass)
+            .profile__sinnosuke-sns
+              = fa_icon "twitter"
+              = link_to src="https://twitter.com/shinnosukedesu1", target: :_blank do
+                @shinnosukedesu1
+          .profile__akira-name
+            AKIRA(vocal)
+            .profile__akira-sns
+              = fa_icon "twitter"
+              = link_to src="https://twitter.com/dis1akira", target: :_blank do
+                @dis1akira
+          .profile__marcy-name
+            MARCY(drums)
+            .profile__marcy-sns
+              = fa_icon "twitter"
+              = link_to src="https://twitter.com/DISACODEmarcy", target: :_blank do
+                @DISACODEmarcy
+= render '/contents/footer'

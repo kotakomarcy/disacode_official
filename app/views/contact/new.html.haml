@@ -1,0 +1,38 @@
+.wrapper
+  .header
+    = link_to root_path do
+      .logo
+        = image_tag src="/assets/wh_logo.png", size: "250x95"
+    = render '/contents/main-header'
+    = render '/contents/main-side-bar'
+    .main-contents
+      .contents-title
+        Contact
+      .contact
+        .contact__contents
+          各ライブのチケット予約や、ご意見、ご要望はこちらから。
+          .contact__contents-info
+            【チケット予約】
+            %br
+            1.ご予約を希望するお名前
+            %br
+            2.チケット枚数
+            %br
+            3.ライブハウスの日時
+            %br
+            以上をご記入の上、ご連絡ください。
+            %br
+            ※予約完了のメールは送信しておりませんので、予めご了承ください。
+          .contact__contents-message-box
+            = form_with url: contact_index_path, method: :post, action: :create, local: true do |f|
+              .contact__contents-name
+                = f.text_field :name, class: "contact__input",  placeholder: "お名前*"
+              .contact__contents-email
+                = f.email_field :email, class:"contact__input", placeholder: "メールアドレス*"
+              .contact__contents-subject
+                = f.text_field :subject, class:"contact__input", placeholder: "件名"
+              .contact__contents-message
+                = f.text_area :message, class:"contact__input-area", placeholder: "メッセージ*"
+              .contact__contents-submit
+                = f.submit "送信", class: 'submit-btn'
+= render '/contents/footer'

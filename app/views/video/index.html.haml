@@ -1,0 +1,53 @@
+.wrapper
+  .header
+    = link_to root_path do
+      .logo
+        = image_tag src="/assets/wh_logo.png", size: "250x95"
+    = render '/contents/main-header'
+    = render '/contents/main-side-bar'
+    .main-contents
+      .contents-title
+        Video
+      .video
+        .video__contents
+          <script src="https://apis.google.com/js/platform.js"></script>
+          <div class="g-ytsubscribe" data-channelid="UC-UdhwYHqW7bam7rKcRuUIg" data-layout="full" data-theme="dark" data-count="default"></div>
+          .video__music-video-text
+            ■Music-video
+            %ul.video__music-video
+              %li
+                %iframe#player{frameborder: "0",width: "600", height: "338", src: "https://www.youtube.com/embed/zIASbAcKI3E"}
+              %li
+                %iframe#player{frameborder: "0",width: "600", height: "338", src: "https://www.youtube.com/embed/GgutgCJiYkc"}
+              -# %li
+              -#   %iframe#player{frameborder: "0",width: "600", height: "338", src: "https://www.youtube.com/embed/4qIo_FODctc"}
+              -# %li
+              -#   %iframe#player{frameborder: "0",width: "600", height: "338", src: "https://www.youtube.com/embed/EhGfLR8gsSc"}
+              -# %li
+              -#   %iframe#player{frameborder: "0",width: "600", height: "338", src: "https://www.youtube.com/embed/fge6wXgVwrk"}
+
+
+              -# %li
+              -#   %iframe#player{frameborder: "0",width: "600", height: "338", src: "https://www.youtube.com/embed/_lh78HpZPQA"}
+          .video__live-video-text
+            ■Live-video
+            %ul.video__live-video
+              %li
+                %iframe#player{frameborder: "0",width: "600", height: "338", src: "https://www.youtube.com/embed/mtkl07PeEvU"}
+              %li
+                %iframe#player{frameborder: "0",width: "600", height: "338", src: "https://www.youtube.com/embed/oQ6eARSjTDc"}
+              -# %li
+              -#   %iframe#player{frameborder: "0",width: "600", height: "338", src: "https://www.youtube.com/embed/gYViwIeTBoU"}
+              -# %li
+              -#   %iframe#player{frameborder: "0",width: "600", height: "338", src: "https://www.youtube.com/embed/-R4Cl4VsECk"}
+              -# %li
+              -#   %iframe#player{frameborder: "0",width: "600", height: "338", src: "https://www.youtube.com/embed/ZBWNPQMdScg"}
+
+
+              -# %li
+              -#   %iframe#player{frameborder: "0",width: "500", height: "281", src: "https://www.youtube.com/embed/-D7fGxThRUM"}
+              -# %li
+              -#   %iframe#player{frameborder: "0",width: "500", height: "281", src: "https://www.youtube.com/embed/Q-gFb2a_o8c"}
+              -# %li
+              -#   %iframe#player{frameborder: "0",width: "500", height: "281", src: "https://www.youtube.com/embed/VAceq-4K8P8"}
+= render '/contents/footer'

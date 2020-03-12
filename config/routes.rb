@@ -1,3 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: 'contents#index'
+  devise_for :admin_users
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  resources :profile, only: [:index]
+  resources :music, only: [:index]
+  resources :info, only: [:index]
+  resources :video, only: [:index]
+
+  resources :picture, only: [:new, :index, :create]
+  resources :contact, only: [:new, :create, :done]
+  
 end

@@ -1,0 +1,32 @@
+.wrapper
+  .header
+    = link_to root_path do
+      .logo
+        = image_tag src="/assets/wh_logo.png", size: "250x95"
+    = render '/contents/main-header'
+    = render '/contents/main-side-bar'
+    .main-contents
+      .contents-title
+        Contact
+      .contact
+        .contact__contents
+          .contact__contents-done-name
+            = @contact.name
+            さま
+          .contact__contents-done-info
+            お問い合わせありがとうございます。
+            %br
+            以下の内容でメッセージ送信が完了いたしました。
+          .contact__contents-done-create
+            .contact__contents-done-subject
+              %h2 ■件名
+              = @contact.subject
+            .contact__contents-done-message
+              %h2 ■メッセージ内容
+              = @contact.message
+          .contact__contents-done-notes
+            ご記入いただいた内容に変更がございまいしたら、お手数ではございますが、再度【Contact】よりお問い合わせください。
+          = link_to new_contact_path do
+            .contact__contents-done-repost
+              続けてお問い合わせする
+= render '/contents/footer'

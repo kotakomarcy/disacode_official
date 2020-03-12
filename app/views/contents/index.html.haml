@@ -1,0 +1,21 @@
+.wrapper
+  .header
+    = link_to root_path do
+      .logo
+        = image_tag src="/assets/wh_logo.png", size: "250x95"
+    = render 'main-header'
+    = render 'main-side-bar'
+    .main-contents
+    .top-image
+      %ul.slider
+        %li
+          = image_tag src="/assets/top-1.jpg", size: "640x360"
+        %li
+          = image_tag src="/assets/top-2.jpg", size: "640x360"
+        %li
+          = image_tag src="/assets/top-3.jpg", size: "640x360"
+        %li
+          = image_tag src="/assets/top-4.jpg", size: "640x360"
+    .contents
+      = render 'schedule'
+= render '/contents/footer'
