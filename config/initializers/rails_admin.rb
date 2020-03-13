@@ -41,7 +41,7 @@ RailsAdmin.config do |config|
 
   # ダッシュボードの表示箇所
   # モデル名 単数形
-  config.model 'Admin user' do
+  config.model 'Admin_user' do
     LABEL_email = 'メールアドレス'
     LABEL_created_at = '作成日時'
     # ここに指定した項目が表示される。include_all_fieldsをすれば全て表示。
@@ -110,7 +110,7 @@ RailsAdmin.config do |config|
     LABEL_date = '日付'
     LABEL_open = 'オープン時間'
     LABEL_start = 'スタート時間'
-    LABEL_advance_price = '前売り価格'
+    LABEL_advance_price = '前売価格'
     LABEL_day_price = '当日価格'
     LABEL_place_name = '会場名'
     LABEL_address = '会場住所'

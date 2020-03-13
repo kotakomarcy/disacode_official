@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :info, only: [:index]
   resources :video, only: [:index]
 
-  resources :picture, only: [:new, :index, :create]
+  resources :picture, only: [:index, :show]
   resources :contact, only: [:new, :create, :done]
   
 end

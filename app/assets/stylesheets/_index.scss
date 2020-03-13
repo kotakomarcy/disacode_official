@@ -386,6 +386,35 @@ li{
   }
 }
 
+// picture用
+.picture{
+  display: flex;
+  margin-top: 20px;
+  &__contents-akira{
+    width: 200px;
+  }
+  &__contents-akira-image{}
+  &__contents-sinnosuke{
+    width: 200px;
+
+  }
+  &__contents-sinnosuke-image{}
+  &__contents-marcy{
+    width: 200px;
+
+  }
+  &__contents-marcy-image{
+
+  }
+  &__contents-live{
+    width: 600px;
+    display: block;
+
+  }
+  &__contents-live-image{}
+}
+
+
 // contact用
 .contact{
   padding: 20px;

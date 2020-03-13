@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_12_040331) do
+ActiveRecord::Schema.define(version: 2020_03_13_032324) do
 
   create_table "admin_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 2020_03_12_040331) do
     t.string "image", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "admin_user_id"
+    t.index ["admin_user_id"], name: "index_pictures_on_admin_user_id"
   end
 
   create_table "schedules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -51,6 +53,10 @@ ActiveRecord::Schema.define(version: 2020_03_12_040331) do
     t.string "cast"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "admin_user_id"
+    t.index ["admin_user_id"], name: "index_schedules_on_admin_user_id"
   end
 
+  add_foreign_key "pictures", "admin_users"
+  add_foreign_key "schedules", "admin_users"
 end

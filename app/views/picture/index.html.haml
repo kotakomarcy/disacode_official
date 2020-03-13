@@ -9,14 +9,19 @@
       .contents-title
         Picture
       .picture
-        -# = form_with url: picture_index_path, model: @picture, method: :post, local: true do |f|
-        -#   .picture__contents-name
-        -#     = f.select :name,[["akira"],["しんのすけ"],["まーしー"],["ライブ"]],class:"contact__input"
-        -#   .picture__contents-image
-        -#     = f.file_field :image, class:"contact__input", placeholder: "画像*"
-        -#   .picture__contents-submit
-        -#     = f.submit "送信", class: 'submit-btn'
-      -# = link_to picture_path(@picture.id) do
-      -#   .picture__show
-      -#     = image_tag "#{picture.picture_image}", class: "image-box", width: "130px",height: "180px"
+        .picture__contents-akira
+          AKIRA
+          .picture__contents-akira-image
+            = image_tag "#{@picture_akira}", class: "picture__contents-image", width: "200px",height: "250px"
+        .picture__contents-sinnosuke
+          しんのすけ
+          .picture__contents-sinnosuke-image
+            -# = image_tag "#{@picture_sin}", class: "picture__contents-image", width: "200px",height: "250px"
+        .picture__contents-marcy
+          まーしー
+          .picture__contents-marcy-image
+            -# = image_tag "#{@picture_marcy}", class: "picture__contents-image", width: "200px",height: "250px"
+      .picture__contents-live
+        Live-photo
+        .picture__contents-live-image
 = render '/contents/footer'

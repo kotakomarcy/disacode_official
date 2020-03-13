@@ -1,22 +1,12 @@
 class PictureController < ApplicationController
-  before_action :set_picture, only:[:show, :destroy]
-
-
-  def new
-    @picture = Picture.new
-    @picture = Picture.includes(:picture).order("created_at DESC").limit(20)
-  end
+  before_action :set_picture, only:[:index, :show, :destroy]
 
   def index
-  end
-
-  def create
-    @picture = Picture.new(picture_params)
-    if @picture.save
-      redirect_to new_picture_path
-    else
-      render :index
-    end
+    @picture_akira = @picture.includes(:pictures).where(name: "akira").order("created_at DESC")
+    # .limit(3)
+    # @picture_sin = Picture.includes(:pictures).where(name: "しんのすけ").order("created_at DESC").limit(3)
+    # @picture_marcy = Picture.includes(:pictures).where(name: "まーしー").order("created_at DESC").limit(3)
+    # @picture_live = Picture.includes(:pictures).where(name: "ライブ").order("created_at DESC").limit(3)
   end
 
   def show
@@ -37,7 +27,7 @@ class PictureController < ApplicationController
     end
 
     def set_picture
-      @picture = Picture.find(params[:id])
+      @picture = Picture.all.includes(:name, :image)
     end
 
 end
