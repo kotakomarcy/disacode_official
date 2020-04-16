@@ -2,14 +2,15 @@ class PictureController < ApplicationController
   before_action :set_picture, only:[:index, :show, :destroy]
 
   def index
-    @picture_akira = @picture.includes(:pictures).where(name: "akira").order("created_at DESC")
-    # .limit(3)
+    @picture_akira = Picture.where(name: "akira").order("created_at DESC").limit(3)
     # @picture_sin = Picture.includes(:pictures).where(name: "しんのすけ").order("created_at DESC").limit(3)
     # @picture_marcy = Picture.includes(:pictures).where(name: "まーしー").order("created_at DESC").limit(3)
     # @picture_live = Picture.includes(:pictures).where(name: "ライブ").order("created_at DESC").limit(3)
   end
 
   def show
+    @picture_akira = Picture.where(name: "akira").order("created_at DESC").limit(3)
+
   end
 
   def destroy
@@ -27,7 +28,7 @@ class PictureController < ApplicationController
     end
 
     def set_picture
-      @picture = Picture.all.includes(:name, :image)
+      @picture = Picture.all.includes(:id, :name, :image)
     end
 
 end
