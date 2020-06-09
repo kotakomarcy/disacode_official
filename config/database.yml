@@ -52,3 +52,6 @@ production:
   database: disacode_official_production
   username: disacode_official
   password: <%= ENV['DISACODE_OFFICIAL_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
