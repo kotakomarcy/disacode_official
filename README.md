@@ -1,5 +1,7 @@
 # DISACODEホームページサンプル
 
+https://disacode-official.herokuapp.com/
+
 本ページにはBASIC認証がかかっています。
 username == admin
 password == 1234
