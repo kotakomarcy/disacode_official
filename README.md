@@ -1,5 +1,9 @@
 # DISACODEホームページサンプル
 
+本ページにはBASIC認証がかかっています。
+username == admin
+password == 1234
+
 Rubyを勉強した内容を踏まえ、自身が加入しているバンドのホームページを作成しています。
 
 ## TOP
