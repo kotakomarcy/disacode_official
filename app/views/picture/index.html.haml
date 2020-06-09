@@ -8,16 +8,19 @@
       .picture
         .picture__contents-akira
           AKIRA
-          - @picture_akira.each do |picture|
-            .picture__contents-akira-image
-              = image_tag "#{@picture_akira_url}", class: "picture__contents-image", width: "200px",height: "250px"
+          .picture__contents-akira-image
+            = image_tag src="/assets/akira_01.jpg", size: "250x375"
+          -# - @picture_akira.each do |picture|
+          -#     = image_tag "#{@picture_akira_url}", class: "picture__contents-image", width: "200px",height: "250px"
         .picture__contents-sinnosuke
           しんのすけ
           .picture__contents-sinnosuke-image
-            -# = image_tag "#{@picture_sin}", class: "picture__contents-image", width: "200px",height: "250px"
+            = image_tag src="/assets/sinnosuke_01.jpg", size: "250x375"
+            -# = image_tag "#{@picture_sin_url}", class: "picture__contents-image", width: "200px",height: "250px"
         .picture__contents-marcy
           まーしー
           .picture__contents-marcy-image
+            = image_tag src="/assets/marcy_01.jpg", size: "250x375"
             -# = image_tag "#{@picture_marcy}", class: "picture__contents-image", width: "200px",height: "250px"
       .picture__contents-live
         Live-photo

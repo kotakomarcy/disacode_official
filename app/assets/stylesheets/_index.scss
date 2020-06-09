@@ -37,8 +37,8 @@ li{
       margin-left: 35px;
     }
     .main-contents{
-      width: 640px;
-      margin: 10px 0 20px 300px;
+      max-width: 640px;
+      margin: 10px 0 20px 250px;
       color: $main-color;
     }
     .contents-title{
@@ -392,16 +392,19 @@ li{
   display: flex;
   margin-top: 20px;
   &__contents-akira{
-    width: 200px;
+    width: 250px;
+    margin: 5px;
   }
   &__contents-akira-image{}
   &__contents-sinnosuke{
-    width: 200px;
+    width: 250px;
+    margin: 5px;
 
   }
   &__contents-sinnosuke-image{}
   &__contents-marcy{
-    width: 200px;
+    width: 250px;
+    margin: 5px;
 
   }
   &__contents-marcy-image{
