@@ -33,8 +33,8 @@ li{
     font-size: large;
     .logo{
       float: left;
-      width: 250px;
-      height: 120px;
+      height: 100px;
+      margin-left: 35px;
     }
     .main-contents{
       width: 640px;
@@ -114,6 +114,7 @@ li{
   text-align: center;
   padding-left: 50px;
   font-weight: bold;
+  margin-bottom: 40px;
   .header-top{
     @include header-content;
   }
